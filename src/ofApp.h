@@ -2,6 +2,12 @@
 
 #include "ofMain.h"
 
+// 카메라의 현재 위치 및 fov(시야각)값을 받는 구조체 타입 지정. (구조체 타입은 ts interface 랑 비슷한 개념이라고 생각하면 될 것 같음.)
+struct CameraData {
+    glm::vec3 pos;
+    float fov;
+};
+
 class ofApp : public ofBaseApp{
 
 	public:
@@ -23,4 +29,6 @@ class ofApp : public ofBaseApp{
 		
         ofMesh torusMesh; // torus.ply 모델링 파일을 로드해서 사용할 메쉬 객체 변수 선언
         ofShader uvShader; // torus.ply 모델의 버텍스 uv좌표를 색상 데이터로 사용할 셰이더 객체 변수 선언
+    
+        CameraData cam; // 카메라 위치 및 fov(시야각)의 현재 상태값을 나타내는 구조체를 타입으로 갖는 멤버변수 cam 을 선언함.
 };
