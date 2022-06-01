@@ -21,4 +21,6 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 		
+        ofMesh torusMesh; // torus.ply 모델링 파일을 로드해서 사용할 메쉬 객체 변수 선언
+        ofShader uvShader; // torus.ply 모델의 버텍스 uv좌표를 색상 데이터로 사용할 셰이더 객체 변수 선언
 };
